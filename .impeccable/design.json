@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T09:34:58.874906Z",
+  "title": "Design System: Prototipos Fundació BIT",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "overlay",
+        "value": "0 10px 34px #00000017",
+        "purpose": "Diálogo y notificación flotante."
+      },
+      {
+        "name": "map-controls",
+        "value": "0 3px 12px #0000001a",
+        "purpose": "Grupo de controles sobre la cartografía."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-transition",
+        "value": "background-color .18s, color .18s",
+        "purpose": "Cambio de estado de los botones."
+      },
+      {
+        "name": "map-building-transition",
+        "value": "opacity .2s",
+        "purpose": "Atenuación de los edificios del mapa."
+      },
+      {
+        "name": "toast-transition",
+        "value": "transform .2s, opacity .2s",
+        "purpose": "Entrada de las notificaciones."
+      },
+      {
+        "name": "route-trace",
+        "value": "trace-route .8s cubic-bezier(.16,1,.3,1) both",
+        "purpose": "Recorrido SVG: stroke-dashoffset de 1000 a 0."
+      },
+      {
+        "name": "scroll-behavior",
+        "value": "smooth",
+        "purpose": "Desplazamiento del documento."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto",
+        "purpose": "Valores existentes cuando prefers-reduced-motion es reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "max-640",
+        "value": "640px"
+      },
+      {
+        "name": "max-900",
+        "value": "900px"
+      },
+      {
+        "name": "max-1200",
+        "value": "1200px"
+      },
+      {
+        "name": "min-1600",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal azul con foco visible y estado deshabilitado.",
+      "html": "<button type=\"button\" class=\"ds-button-primary\">Explorar las demos</button>",
+      "css": ".ds-button-primary{box-sizing:border-box;display:inline-flex;justify-content:center;align-items:center;gap:16px;min-height:48px;padding:13px 20px;border:1px solid transparent;border-radius:5px;font-family:\"Avenir Next\", \"Segoe UI\", Arial, sans-serif;font-size:13px;font-weight:650;line-height:1.35;text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s;background:var(--blue,#003366);color:var(--page,#fff)}.ds-button-primary:hover{background:#0e507d}.ds-button-primary:focus-visible{outline:3px solid var(--focus,#008c99);outline-offset:4px;}.ds-button-primary:disabled{cursor:default;opacity:.6}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition-duration:.01ms!important}}"
+    },
+    {
+      "name": "Botón secundario",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Acción complementaria de borde fino y fondo transparente.",
+      "html": "<button type=\"button\" class=\"ds-button-secondary\">Ver alcance y recorridos</button>",
+      "css": ".ds-button-secondary{box-sizing:border-box;display:inline-flex;justify-content:center;align-items:center;gap:16px;min-height:48px;padding:13px 20px;border:1px solid transparent;border-radius:5px;font-family:\"Avenir Next\", \"Segoe UI\", Arial, sans-serif;font-size:13px;font-weight:650;line-height:1.35;text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s;background:transparent;border-color:#bacbd3;color:var(--blue,#003366)}.ds-button-secondary:hover{background:var(--tint,#edf4f5);border-color:var(--blue,#003366)}.ds-button-secondary:focus-visible{outline:3px solid var(--focus,#008c99);outline-offset:4px;}.ds-button-secondary:disabled{cursor:default;opacity:.6}@media(prefers-reduced-motion:reduce){.ds-button-secondary{transition-duration:.01ms!important}}"
+    },
+    {
+      "name": "Campo de búsqueda",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo de filtro con etiqueta, tamaño adaptable y foco de teclado.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-search\">Búsqueda</label><input id=\"ds-search\" type=\"search\" placeholder=\"Buscar\"></div>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:7px;min-width:0;font-family:\"Avenir Next\", \"Segoe UI\", Arial, sans-serif;line-height:1.6;color:var(--ink,#152d40)}.ds-field label{font-size:11px;font-weight:650;color:var(--muted,#536574)}.ds-field input{box-sizing:border-box;min-height:45px;border:1px solid #bdcdd4;border-radius:4px;background:var(--page,#fff);width:100%;padding:10px 12px;font:inherit;font-size:12px;caret-color:var(--cyan,#007d86);color:inherit}.ds-field input::placeholder{color:#60727e;opacity:1}.ds-field input:focus-visible{outline:3px solid var(--focus,#008c99);outline-offset:2px}@media(max-width:640px){.ds-field input{min-height:46px}}"
+    },
+    {
+      "name": "Etiqueta",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Etiqueta informativa sin interacción ni estados añadidos.",
+      "html": "<span class=\"ds-tag\">Demostración</span>",
+      "css": ".ds-tag{display:inline-flex;padding:5px 9px;border-radius:4px;background:var(--tint,#edf4f5);color:#275368;font-family:\"Avenir Next\", \"Segoe UI\", Arial, sans-serif;font-size:11px;font-weight:650;line-height:1.6}"
+    },
+    {
+      "name": "Navegación",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Enlaces de la cabecera; la muestra expone la navegación sin el control exterior de apertura móvil.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Principal\"><a href=\"#/inicio\" aria-current=\"page\">Inicio</a><a href=\"#/prototipos\">Explorar las demos</a></nav>",
+      "css": ".ds-nav{display:flex;justify-content:space-between;gap:18px;border-top:1px solid var(--line,#dce3e5);border-bottom:1px solid var(--line,#dce3e5);background:var(--page,#fff);color:var(--ink,#152d40);font-family:\"Avenir Next\", \"Segoe UI\", Arial, sans-serif;line-height:1.6}.ds-nav a{box-sizing:border-box;min-height:53px;display:inline-flex;align-items:center;padding-inline:0;font-size:13px;font-weight:600;text-decoration:none;color:inherit;border-bottom:3px solid transparent;margin-bottom:-1px}.ds-nav a:hover{color:var(--cyan,#007d86)}.ds-nav a[aria-current]{color:var(--blue,#003366);border-color:var(--cyan-bright,#00a8b5)}.ds-nav a:focus-visible{outline:3px solid var(--focus,#008c99);outline-offset:4px;}@media(max-width:900px){.ds-nav{gap:16px}.ds-nav a{font-size:11px}}@media(max-width:640px){.ds-nav{display:grid;grid-template-columns:1fr 1fr;padding-block:10px;gap:0 20px}.ds-nav a{min-height:46px;font-size:12px}.ds-nav a[aria-current]{border-bottom-color:transparent;text-decoration:underline;text-decoration-color:var(--cyan,#007d86)}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Dirección heredada de la memoria",
+    "overview": "Este documento registra el sistema visual implementado en los seis prototipos estáticos. Hereda el azul, el turquesa y la interfaz limpia de las maquetas de la memoria; no establece una identidad oficial de Fundació BIT.\n\nLa jerarquía se apoya en textos oscuros, fondos blancos y superficies suaves. Las interacciones tienen selección visible, foco de teclado y una variante de alto contraste.",
+    "keyCharacteristics": [
+      "Paleta azul y turquesa heredada.",
+      "Tipografía sans del sistema, sin descarga de fuentes.",
+      "Bordes finos y cartografía esquemática."
+    ],
+    "rules": [],
+    "dos": [
+      "Do conservar la paleta heredada y las funciones de cada color.",
+      "Do mantener etiquetas, foco visible, alto contraste y reducción de movimiento.",
+      "Do conservar los avisos de demostración y comprobar el espacio disponible en castellano, catalán e inglés."
+    ],
+    "donts": [
+      "Don't presentar esta implementación como una identidad oficial.",
+      "Don't sustituir los mapas esquemáticos por representaciones que prometan precisión geográfica.",
+      "Don't eliminar el indicador de selección ni el foco al adaptar componentes."
+    ]
+  }
+}
