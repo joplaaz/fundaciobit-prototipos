@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#003366">
+  <meta name="description" content="Prototipos interactivos del portal Fundació BIT: servicios, agenda, directorio, visor y movilidad sostenible. Datos de demostración.">
+  <title>Fundació BIT · Prototipos interactivos</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/i18n.js"></script>
+  <script defer src="assets/js/map.js"></script>
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+  <div class="demo-strip"><span data-i18n="demo">Prototipo interactivo · Datos de demostración</span><a href="#/prototipos" data-i18n="exploreDemos">Explorar las demos</a></div>
+  <header class="site-header">
+    <div class="header-main wrap">
+      <a class="brand" href="#/inicio" aria-label="Fundació BIT, inicio"><svg viewBox="0 0 44 44" width="43" height="43" aria-hidden="true"><path fill="#003366" d="M2 8 22 0v13L2 22zM2 25l20-9v13L2 39z"/><path fill="#008b91" d="m25 1 17 8v14l-17-8z"/><path fill="#00a8b5" d="m25 19 17 8-20 17L8 38l17-9z"/></svg><span>Fundació<span class="brand-bit">BIT<span class="brand-dot">.</span></span></span></a>
+      <div class="header-tools"><label class="language-label"><span class="sr-only" data-i18n="language">Idioma</span><select id="language" aria-label="Idioma"><option value="es">ES</option><option value="ca">CA</option><option value="en">EN</option></select></label><button class="icon-button" id="contrast" type="button" aria-label="Alto contraste" aria-pressed="false"></button><button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"></button></div>
+    </div>
+    <div class="nav-wrap"><nav class="main-nav wrap" aria-label="Principal" id="main-nav"></nav></div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <footer class="site-footer"><div class="wrap footer-inner"><a href="#/inicio" class="footer-brand">Fundació BIT<span>.</span></a><p data-i18n="footer">Una demostración del ecosistema digital de innovación de las Illes Balears.</p><a href="#/prototipos" data-i18n="scope">Ver alcance y recorridos</a></div><div class="wrap footer-note" data-i18n="footerNote">Demostración independiente. Los formularios no envían información y el mapa no sirve para navegar sobre el terreno.</div></footer>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="wrap">Activa JavaScript para explorar los prototipos interactivos.</p></noscript>
+</body>
+</html>
